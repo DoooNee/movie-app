@@ -1,0 +1,26 @@
+.wrapper {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    margin-left: 25px;
+    margin-right: 25px;
+    gap: 1em;
+}
+
+.inner {
+    color: #fff;
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    .image {
+        border-radius: 7px;
+
+        width: 100%;
+    }
+    .movieName {
+        text-align: center;
+        font-size: 2rem;
+    }
+}

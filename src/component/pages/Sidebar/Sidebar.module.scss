@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+}
+
+.inner {
+    display: flex;
+}
+
+.link {
+    position: relative;
+    margin: 0 15px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s linear;
+    :hover {
+        color: #fff;
+    }
+
+    :after {
+        content: '';
+        position: absolute;
+        background-color: var(--color-red-);
+        width: 0%;
+        height: 3px;
+        left: 0;
+        bottom: -3px;
+        transition: 0.3s ease;
+    }
+    :hover:after {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .wrapper {
+        display: none;
+    }
+}

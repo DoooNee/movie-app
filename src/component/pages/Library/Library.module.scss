@@ -1,0 +1,40 @@
+.wrapper {
+}
+
+.subMenu {
+    background-color: rgb(35, 37, 43);
+    padding: 9px;
+    border-radius: 5px;
+    color: rgb(165, 159, 159);
+    cursor: pointer;
+    &:hover {
+        color: rgb(228, 226, 226);
+    }
+}
+
+@media only screen and (max-width: 1142px) {
+    .subMenu {
+        padding: 9px;
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 1106px) {
+    .subMenu {
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 874px) {
+    .subMenu {
+        padding: 4px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 763px) {
+    .subMenu {
+        display: none;
+    }
+}

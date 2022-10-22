@@ -1,0 +1,115 @@
+.wrapper {
+    color: var(--color-white-);
+    padding-top: 30px;
+    position: relative;
+    margin: 0 60px;
+    .heading {
+        font-size: 3rem;
+        user-select: none;
+    }
+}
+
+.btnLeft {
+    position: absolute;
+    left: -45px;
+    top: 55%;
+    font-size: 4rem;
+    cursor: pointer;
+    color: rgb(78, 77, 77);
+
+    &:hover {
+        color: rgb(255, 255, 255);
+    }
+}
+
+.btnRight {
+    position: absolute;
+    right: -45px;
+    font-size: 4rem;
+    top: 55%;
+    cursor: pointer;
+
+    color: rgb(78, 77, 77);
+
+    &:hover {
+        color: rgb(255, 255, 255);
+    }
+}
+
+.listMovies {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: hidden;
+    padding-top: 20px;
+    cursor: pointer;
+    &:hover .movieItem {
+        opacity: 0.4;
+    }
+
+    .movieItem {
+        transform: scale(1);
+        min-width: 230px;
+        height: auto;
+        user-select: none;
+        position: relative;
+        border-radius: 10px;
+
+        .movieImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .movieName {
+            font-size: larger;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 3px;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        margin: 0 45px;
+
+        .heading {
+            font-size: 2rem;
+        }
+        .movieItem {
+            min-width: 170px;
+
+            .movieName {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1032px) {
+    .wrapper {
+        margin: 0 45px;
+
+        .heading {
+            font-size: 2.5rem;
+        }
+        .movieItem {
+            min-width: 200px;
+
+            .movieName {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+.wrapper {
+    width: 100%;
+    height: 60px;
+    color: white;
+    position: fixed;
+    transition: all 0.8s linear;
+    z-index: 50;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    .logo {
+        align-items: center;
+        height: 100%;
+        cursor: pointer;
+
+        .logoImg {
+            width: 60px;
+            margin-top: 10px;
+        }
+    }
+    .profile {
+        color: var(--color-white-);
+
+        .profileWrapper {
+            position: relative;
+            display: flex;
+
+            .search {
+                margin-right: 30px;
+                input {
+                    width: 240px;
+                    height: 36px;
+                    border-radius: 4px;
+                    background: rgba(255, 255, 255, 0.2);
+                    font-size: 1.4rem;
+                    overflow: hidden;
+                    padding-left: 12px;
+                    margin-top: 4px;
+                }
+            }
+
+            .iconPerson {
+                font-size: 3rem;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--color-red-);
+                }
+                &:hover .register {
+                    display: block;
+                }
+            }
+            .register {
+                position: absolute;
+                width: 230px;
+                height: 80px;
+                background-color: #333;
+                color: var(--color-white-);
+                right: 3px;
+                top: 103%;
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 2.5;
+                border-radius: 3px;
+                display: none;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    right: 0;
+                    top: -12%;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-bottom: 15px solid #333;
+                }
+
+                .btn {
+                    border: none;
+                    background-color: var(--color-red-);
+                    padding: 7px 25px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .inner {
+        .logo {
+            .logoImg {
+                width: 50px;
+                margin-top: 12px;
+            }
+        }
+        .profile {
+            .profileWrapper {
+                .search {
+                    input {
+                        width: 180px;
+                        height: 30px;
+                        margin-top: 7px;
+                    }
+                }
+                .register {
+                    width: 170px;
+                    height: 70px;
+                    font-size: 1.1rem;
+
+                    .btn {
+                        border: none;
+                        padding: 5px 25px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

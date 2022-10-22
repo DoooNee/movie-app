@@ -1,0 +1,165 @@
+.wrapper {
+    height: 100%;
+    background-color: rgb(17, 19, 25);
+}
+
+.inner {
+    position: relative;
+
+    .fadeTop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 30%;
+        background: linear-gradient(180deg, rgba(18, 18, 18, 1), transparent);
+    }
+    .fadeBottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(360deg, rgba(18, 18, 18, 1), transparent);
+    }
+    .fadeLeft {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 30%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1), transparent);
+        .nextLeft {
+            position: absolute;
+            left: 0;
+            color: white;
+            top: 50%;
+            margin-left: 10px;
+            font-size: 5rem;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            opacity: 0.8;
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+    }
+
+    .backgroundImage {
+        width: 100%;
+        height: 100%;
+    }
+
+    .description {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-left: 15%;
+        margin-top: 15%;
+
+        .intro {
+            max-width: 55rem;
+            height: 40rem;
+            color: var(--color-white-);
+
+            .title {
+                font-family: 'Pacifico', cursive;
+                font-size: 5rem;
+            }
+            .introVote {
+                color: var(--color-red-);
+                font-size: 3rem;
+            }
+            .introOverview {
+            }
+        }
+
+        .descriptionPoster {
+            width: 30rem;
+            height: 40rem;
+            margin-left: 15rem;
+            background-color: rgb(0, 0, 0);
+            border-radius: 30px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+
+            .descriptionPosterItem {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+        }
+    }
+    .nextRight {
+        svg {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            color: #fff;
+            font-size: 5rem;
+            margin-right: 10px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            background-color: none;
+            opacity: 0.8;
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .wrapper {
+        .descriptionPoster {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1032px) {
+    .wrapper {
+        .description {
+            margin-left: 15%;
+            margin-top: 20%;
+        }
+        .descriptionPoster {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        .backgroundImage {
+            width: 100vw;
+            height: 60vh;
+        }
+        .description {
+            margin-left: 5%;
+            margin-top: 15%;
+
+            .intro {
+                .title {
+                    font-size: 3rem;
+                }
+                .introVote {
+                    font-size: 2rem;
+                }
+            }
+        }
+        .descriptionPoster {
+            display: none;
+        }
+    }
+}

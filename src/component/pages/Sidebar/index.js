@@ -7,7 +7,7 @@ const Sidebar = () => {
         <div className={styles.wrapper}>
             <div className={styles.inner}>
                 <div className={styles.link}>
-                    <Link to="/">HOME</Link>
+                    <Link to="/movie-app">HOME</Link>
                 </div>
                 <div className={styles.link}>
                     <Link to="/search">SEARCH</Link>

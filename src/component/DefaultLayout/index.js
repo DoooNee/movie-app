@@ -12,7 +12,7 @@ const DefaultLayout = (props) => {
             <Router>
                 <Header />
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="//movie-app" element={<Home />} />
                     <Route path="/search" element={<Search />} />
                     <Route path="/trending" element={<Trending />} />
                 </Routes>

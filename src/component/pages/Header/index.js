@@ -18,7 +18,7 @@ const Header = () => {
     };
 
     const goHome = () => {
-        navigate('/');
+        navigate('/movie-app');
         setKeywords('');
     };
     return (

@@ -14,7 +14,7 @@ const Header = () => {
     const handleChange = (e) => {
         let keywords = e.target.value;
         setKeywords(keywords);
-        keywords.length > 0 ? navigate(`./search?keywords=${keywords.trim()}`) : navigate('/');
+        keywords.length > 0 ? navigate(`./search?keywords=${keywords.trim()}`) : navigate('/movie-app');
     };
 
     const goHome = () => {
